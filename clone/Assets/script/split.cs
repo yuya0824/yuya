@@ -7,20 +7,26 @@ public class split : MonoBehaviour
     [SerializeField]
     private GameObject character;
 
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField, Range(0.0f, 1.0f)]
+    private float miniSize = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        character.transform.localScale *= new Vector2(0.8f, 0.8f);
-
-        for(int i = 0; i < 5; i++)
-        {
-            Instantiate(character, new Vector3(transform.position.x, transform.position.y,transform.position.z), Quaternion.identity);
-        }
+        character.transform.localScale = new Vector3(miniSize, miniSize, 1.0f);
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        character.transform.localScale *= new Vector2(1.0f, 1.0f);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            //character.transform.localScale *= new Vector2(0.8f, 0.8f);
+            Instantiate(character, new Vector3(player.transform.position.x, player.transform.position.y + 3, player.transform.position.z), Quaternion.identity);
+        }
     }
 }
