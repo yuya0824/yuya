@@ -5,19 +5,29 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     float speed = 5.0f;
+    float jump = 0.0f;
     // Update is called once per frame
     void Update()
     {
-        // Dキー（右移動）
-        if (Input.GetKey(KeyCode.D))
+        // （右移動）
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += speed * transform.right * Time.deltaTime;
         }
 
-        // Aキー（左移動）
-        if (Input.GetKey(KeyCode.A))
+        // (左移動）
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= speed * transform.right * Time.deltaTime;
         }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            jump = 5.0f;
+        }
+
+        transform.position += jump * transform.up * Time.deltaTime;
+        jump *= 0.98f;
+
     }
 }

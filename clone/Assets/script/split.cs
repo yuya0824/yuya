@@ -23,10 +23,11 @@ public class split : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //character.transform.localScale *= new Vector2(0.8f, 0.8f);
             Instantiate(character, new Vector3(player.transform.position.x, player.transform.position.y + 3, player.transform.position.z), Quaternion.identity);
         }
+
     }
 }
