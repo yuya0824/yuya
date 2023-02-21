@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5831187329892329892}
   - component: {fileID: 4451886401715876536}
   m_Layer: 0
-  m_Name: CharacterPrefab
+  m_Name: CharacterPrefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7449611233680791357}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 21064de667f0d79419f64a502d662919, type: 2}
+  m_Material: {fileID: 6200000, guid: 2eec2dfd68cc6d94ba1b0bce1113fb95, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -132,4 +132,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
