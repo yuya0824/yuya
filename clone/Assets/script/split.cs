@@ -21,6 +21,6 @@ public class split : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        character.transform.localScale *= new Vector2(1.0f, 1.0f);
     }
 }
