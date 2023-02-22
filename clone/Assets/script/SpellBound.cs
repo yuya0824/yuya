@@ -51,6 +51,7 @@ public class SpellBound : MonoBehaviour
         if(isFire)
         {
             GameObject game = Instantiate(FireObject, transform.position, Quaternion.identity);
+            StartCoroutine(DoSmole());
             StartCoroutine(DoMove(game));
             Destroy(game, 6.0f);
             isFire = false;
@@ -64,15 +65,26 @@ public class SpellBound : MonoBehaviour
 
     private IEnumerator DoMove(GameObject game)
     {
+        Vector2 preSpeed = speed;
         while(true)
         {
-            game.transform.Translate(this.speed.x, this.speed.y, 0);
-            this.speed.x *= 0.98f;
-            this.speed.y *= 0.98f;
+            game.transform.Translate(preSpeed.x, preSpeed.y, 0);
+            preSpeed.x *= 0.98f;
+            preSpeed.y *= 0.98f;
 
             yield return new WaitForSeconds(0.01f);
 
         }
 
+    }
+
+    private IEnumerator DoSmole()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            transform.localScale *= 0.9999f;
+
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
