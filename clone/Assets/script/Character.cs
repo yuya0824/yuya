@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     float speed = 5.0f;
     float jump = 0.0f;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +24,7 @@ public class Character : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
-            jump = 5.0f;
+            jump = 10.0f;
         }
 
         transform.position += jump * transform.up * Time.deltaTime;
