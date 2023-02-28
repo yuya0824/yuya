@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1739686275334393751}
   - component: {fileID: 5831187329892329892}
   - component: {fileID: 4451886401715876536}
+  - component: {fileID: 5767590444012554906}
   m_Layer: 0
   m_Name: CharacterPrefab 1
   m_TagString: Untagged
@@ -133,3 +134,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5767590444012554906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449611233680791357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8542a385a37a7045b4618b6481910e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 90
+  limitSpeed: 2
